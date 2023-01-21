@@ -1,0 +1,77 @@
+stoppar lektionen vid 00:56:19
+
+behöver ändra lite på klasserna och "adda" en tom span mall
+
+
+function createActivity()
+{
+    if(document.querySelector(".add_form input").value.length == 0){
+        alert("please enter task")
+    }
+    else{
+        document.querySelector(".todo_list_item").innerHTML += `
+        <li class="list_item">
+        <span id="activityName">
+        ${document.querySelector(".add_form input").value}
+        </span>
+
+        <button class="delete">
+            <i class="far fa-trash-alt"></i>
+            </button>
+            </li>
+        ` ;
+        var current_tasks = document.querySelectorAll(.delete);
+        for(var i=0; i<current_tasks.length; i++){
+            current_tasks[i].onclick = function(){
+                this.parentNode.remove();
+            }
+        }
+    }
+
+    /*const search = document.querySelector("#filterList");
+search.addEventListener("input", filter)
+
+function filter(e){
+    let temp = '';
+    const result = todoListItems.filter(item=> item.toLowerCase().includes(e.target.value.toLowerCase()));
+
+    if(result.lenght>0){
+        let temp = `<ul class="todo_list_items">`;
+        result.forEach((item) => {
+            temp += `<li class="list_item"> ${item} </li>`;
+        });
+        temp += `</ul>`;
+    }else{
+        temp = `<div class="no-item"> Hittar ingenting </div>`;
+    }
+
+    todoListItems.innerHTML =temp;
+}*/
+
+/*
+// Get input element
+let filterList = document.querySelector("#filterList");
+//Add event listener
+filterList.addEventListener('keyup', filterActivities);
+
+function filterActivities(){
+    //get value of input
+    let filterValue = document.getElementById('filterList').value.toUpperCase();
+    //get the todo list items ul
+    let ul = document.getElementById('.todo_list_items');
+    //get list from ul
+    let li = document.querySelectorAll('li.list_item');
+
+    //loop trough collection-item lis
+    for(let i = 0;i < li.length;i++){
+        let a = li[i].getElementsByTagName("li")[0];
+        //if matched
+        if(li.innerHTML.toUpperCase().indexOf(filterValue) >
+        -1){
+            li[i].style.display = '';    
+        } else {
+            li[i].style.display = 'none';
+        }
+    }
+    
+}*/

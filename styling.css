@@ -1,0 +1,324 @@
+
+@media screen and (max-width: 600px){
+    .formContainer {
+        flex-direction: column;
+    }
+    #root{
+        width: 100%;
+    }
+}
+
+body{
+    background-image: url(images/hällar.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background-attachment: fixed;
+
+    height: auto;
+
+
+}
+header{
+    color: rgb(9, 17, 86);
+    padding: 3px;
+}
+
+h1{
+       font-family: 'poppins', sans-serif;
+       font-size: 40px;
+       font-stretch:ultra-expanded;
+       font-weight: bolder;
+}
+
+.flex-center-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#root{
+    display: flex;
+    height: 50vh;
+    width: 70%;
+    min-width: 200px;
+    max-height: 600px;
+    margin-top:90vh;
+    margin: auto;
+    flex-direction:column;
+
+}
+
+.textContainer{
+    color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.formContainer{
+    display:flex;
+    flex-direction: column;
+    color:black;
+    background-color: rgba(255, 255, 255, 0.39);
+    height: auto;
+    padding: 5%;
+    border: none;
+    box-shadow: 0px 5px 10px black;
+    border-radius: 20px;
+
+}
+
+.add_form{
+
+    color:black;
+    position: relative;
+    padding: 30px 20px;
+}
+
+#inputActivity{
+    background: rgba(255, 255, 255, 0.502);
+    width:90%;
+    height: 18px;
+    font-size:15px;
+    font-family: 'poppins', sans-serif;
+    border: none;
+    padding: 12px;
+    font-weight: 500;
+    position: relative;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+#dateTime{
+    background: rgba(255, 255, 255, 0.452);
+    width:32%;
+    height: 18px;
+    font-size:15px;
+    font-family: 'poppins', sans-serif;
+    border: none;
+    padding: 12px;
+    font-weight: 500;
+    position: relative;
+    border-radius: 5px;;
+    float:left;
+    margin: 5px;
+}
+
+#selectCategory{
+    background: rgba(255, 255, 255, 0.537);
+    width:35%;
+    font-size:15px;
+    font-family: 'poppins', sans-serif;
+    border: none;
+    padding: 12px;
+    font-weight: 500;
+    border-radius: 5px;
+    float:left;
+    margin: 5px;
+
+}
+
+
+.add_form input:focus{
+    outline: none;
+    border-color: blue;
+}
+
+.add_form button{
+    position: relative;
+    float: left;
+    width: 19%;
+    height: 45px;
+    border-radius: 5px;
+    font-family: 'poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: rgb(84, 84, 203);
+    color: white;
+    outline: none;
+    border: none;
+    margin: 5px;
+    
+}
+
+.add_form button:hover{
+    background-color:#0f39c6;
+    color: black;
+}
+
+.view_todo_list{
+    display:flex;
+    flex-direction: column;
+    color:black;
+    background-color: rgba(255, 255, 255, 0.37);
+    height: auto;
+    border: none;
+    box-shadow: 0px 5px 10px black;
+    border-radius: 20px;
+    padding:2.5%;
+
+
+}
+
+.ListFilter{
+    display:flex;
+    flex-direction: column;
+
+}
+
+#filterInput{
+    background: rgba(255, 255, 255, 0.473);
+    width:48%;
+    height: 18px;
+    font-size:15px;
+    font-family: 'poppins', sans-serif;
+    border: none;
+    padding: 12px;
+    font-weight: 500;
+    position: relative;
+    border-radius: 5px;
+    margin: 5px;
+}
+.sradioButtons input[type="radio"]{
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+.sradioButtons label {
+    display: inline-block;
+    background-color: rgb(84, 84, 203);
+    color: white;
+    font-family: 'poppins', sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    font-weight: 500;
+    position: relative;
+    border: border solid rgb(0, 0, 0);
+    border-radius: 5px;
+    margin: 5px;
+    outline: none;
+}
+
+.sradioButtons label:hover {
+    background-color:#0a2ea4;
+    color:black;
+
+}
+
+.sradioButtons input[type="radio"]:checked + label {
+    background-color:#0a1b55;
+    color:black;
+}
+
+
+.todo_list{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    padding: 6%;
+}
+
+.todo_list_header{
+    color: white;
+    background-color: rgba(24, 24, 65, 0.694);
+    width: 59%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'poppins', sans-serif;
+    font-weight: bold;
+    margin: 4px;
+    height: 18px;
+    font-size:15px;
+    border: none;
+    padding: 12px;
+    position: relative;
+    border-radius: 5px;
+}
+
+.todo_list_header > * {
+    flex: 25%;
+}
+
+.list_item{
+
+    display: flex;
+    background-color: rgba(34, 33, 112, 0.58);
+    flex-direction: row;
+    color: white;
+    justify-content: space-between;
+    margin: 2px;
+    width:82%;
+    height: 25px;
+    font-size:15px;
+    border: none;
+    padding: 10px;
+    font-family: 'poppins', sans-serif;
+    font-weight: 300;
+    border-radius: 5px;
+    position: relative;
+
+}
+
+.list_item button{
+    background: #0a2ea4;
+    position: relative;
+    float: right;
+    width: 19%;
+    height: 100%;
+    border-radius: 5px;
+    font-family: 'poppins', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    background-color: rgb(84, 84, 203);
+    color: white;
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+.list_item button:hover{
+    background-color:#0f39c6;
+    color: black;
+}
+
+.list_item > * {
+    flex-basis:25%;
+}
+
+ul{
+    list-style-type:none;
+    overflow:Hidden;
+}
+
+.list_item span{
+    font-family: 'poppns', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+footer{
+    background-color:rgba(21, 22, 23, 0.468);
+    border: none;
+    color:rgb(79, 74, 74);
+    box-shadow: 0px 5px 10px black;
+    border-radius: 20px;
+    font-size:smaller;
+    font-family: 'poppins', sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide{
+    display:none;
+}
+
+.show{
+    display: block;
+}

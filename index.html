@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styling.css">
+</head>
+<body>
+
+    <div id="root">
+
+        <header class="flex-center-row">
+        <h1>TODO Lista</h1>
+        </header>
+        <hr>
+
+        <div class="textContainer">
+            <main>
+                <div class="formContainer">
+
+                    <!--Aktivitet-->
+                    <div class="add_form">
+                        <label for="inputActivity"></label> 
+                        <input id="inputActivity" type="text" value="" placeholder="skriv in ditt todo...">
+
+                        <label for="dateTime"></label>
+                        <input id="dateTime" type="datetime-local" value=""> 
+
+                        
+                        <label for="category"></label>
+                        <select name="selectCategory" id="selectCategory">
+                            <option value="Alla">Alla</option>
+                            <option Value="Hushållsarbete">Hushållsarbete</option>
+                            <option Value="Jobb">Jobb</option>
+                        </select>
+
+                        <!--Lägg till knapp-->
+                        <button onclick="createActivity()">Lägg till</button>
+                    </div>
+                </div>
+                <hr>
+                <!--TODO List-->
+                <div class="view_todo_list">
+
+                    <div class="todo_list">
+
+                    <!--sökfilter-->
+                    <div class="ListFilter">
+                        <label for="filterInput"></label>
+                        <input id="filterInput" onkeyup="filterActivities(filterInput.value)" placeholder="sök...">
+                   
+                        <!--mina radiobuttons-->
+                        <div class="radioButtons">
+                            <label><input name="radio_category" id="category1" type="radio" value="Alla">Alla</label>
+
+                            <label><input name="radio_category" onclick="filterCategories(category2.Value)" id="category2" type="radio" value="Hushållsarbete">Hushållsarbete</label>
+
+                            <label><input name="radio_category" onclick="filterCategories(category3.Value)" id="category3" type="radio" value="Jobb">Jobb</label>
+                    
+                        </div>
+                    </div>
+                    
+                    <br><br>
+
+                        <!--Listan-->
+                        <div class="todo_list_header">
+                            <span>Aktivitet</span>
+                            <span>Utför senast</span>
+                            <span>Kategori</span>
+                        </div>
+                        <ul class="todo_list_items">
+                            <!--List Items-->
+                        </ul>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <hr>
+
+    <footer><p>copywrite genetics corporation</p></footer>
+
+    </div>
+
+    <script type="application/javascript" src="mina_scripts/script.js">
+    </script>
+</body>
+</html>
